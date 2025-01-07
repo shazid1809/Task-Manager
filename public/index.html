@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Task Manager</h1>
+    </header>
+    <main>
+      <div class="container" id="task-form-container">
+        <input type="hidden" id="taskId" />
+        <input
+          type="text"
+          id="taskDescription"
+          placeholder="Task Description"
+        />
+        <input type="text" id="assignedTo" placeholder="Assigned To" />
+        <input type="date" id="dueDate" />
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <select id="status">
+          <option value="">Select Status</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <button onclick="saveData()">Save Task</button>
+      </div>
+      <div class="container" id="search-container">
+        <input
+          type="text"
+          id="search"
+          class="task-input"
+          placeholder="Search tasks"
+          oninput="searchData()"
+        />
+
+        <div id="task-list" class="container"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&copy; 2024 Task Manager | All rights reserved | Group 4</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
